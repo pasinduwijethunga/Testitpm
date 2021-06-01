@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetablemanagementsystem.workingDaysAndHours.views.WorkingDaysAndHoursController">
+   <top>
+      <Label text="INSTITUTE OF ABC" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <left>
+            <VBox prefHeight="403.0" prefWidth="225.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="235.0" style="-fx-background-color: gray;" text="       Insert Working Days">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <Label layoutX="30.0" layoutY="67.0" text="ID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text="No of Working Days">
+                     <VBox.margin>
+                        <Insets left="20.0" top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Working days">
+                     <VBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Working time per day">
+                     <VBox.margin>
+                        <Insets left="20.0" top="185.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label text="Select time slot">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="20.0" top="60.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox fillWidth="false" prefHeight="445.0" prefWidth="614.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="275.0" style="-fx-background-color: gray;" text="and  Hours">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfId" layoutX="10.0" layoutY="67.0" minWidth="50.0" prefHeight="25.0" prefWidth="150.0" />
+                  <TextField fx:id="No_workigdays" minWidth="50.0" prefHeight="25.0" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets right="20.0" top="30.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextArea fx:id="workigDays" prefHeight="177.0" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <TextField fx:id="hours" minWidth="50.0" prefHeight="25.0" prefWidth="150.0" promptText="Hours">
+                     <VBox.margin>
+                        <Insets right="20.0" top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextField fx:id="minute" minWidth="50.0" prefHeight="25.0" prefWidth="150.0" promptText="Minute">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <TextArea fx:id="timeSlot" prefHeight="61.0" prefWidth="150.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+         </center>
+         <right>
+            <AnchorPane prefHeight="425.0" prefWidth="358.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="tvdays" layoutX="-446.0" layoutY="28.0" prefHeight="418.0" prefWidth="825.0">
+                    <columns>
+                      <TableColumn fx:id="Colid" prefWidth="78.0" text="ID" />
+                        <TableColumn fx:id="Colnoofworkingdays" prefWidth="139.0" text="No of working days" />
+                        <TableColumn fx:id="Colworkingdays" prefWidth="190.0" text="working days" />
+                        <TableColumn fx:id="Colwhorkighours" minWidth="0.0" prefWidth="128.0" text="working H pre day" />
+                        <TableColumn fx:id="ColworkingMin" prefWidth="128.0" text="working Min pre day" />
+                        <TableColumn fx:id="Coltimeslot" maxWidth="211.0" prefWidth="148.0" text="Time slot" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="-461.0" prefHeight="25.0" prefWidth="840.0" style="-fx-background-color: gray;" text="working days and Hours View">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+         <top>
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <buttons>
+                  <Button fx:id="Home" maxWidth="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMenuStudent" prefHeight="26.0" prefWidth="0.0" text="HOME" />
+                  <MenuButton fx:id="sm" maxWidth="20.0" minWidth="52.0" mnemonicParsing="false" onAction="#handleMenuStudent" prefHeight="26.0" prefWidth="102.0" text="Student">
+                     <items>
+                        <MenuItem fx:id="sm1" mnemonicParsing="false" onAction="#handleMenuStudent" text="Academic Details" />
+                        <MenuItem fx:id="sm2" mnemonicParsing="false" onAction="#handleMenuStudent" text="Program Details" />
+                        <MenuItem fx:id="sm3" mnemonicParsing="false" onAction="#handleMenuStudent" text="Group Details" />
+                        <MenuItem fx:id="sm4" mnemonicParsing="false" onAction="#handleMenuStudent" text="Tags Details" />
+                        <MenuItem fx:id="sm5" mnemonicParsing="false" onAction="#handleMenuStudent" text="Generate Group ID" />
+                        <MenuItem fx:id="sm6" mnemonicParsing="false" onAction="#handleMenuStudent" text="Concecutive Session" />
+                        <MenuItem fx:id="sm7" mnemonicParsing="false" onAction="#handleMenuStudent" text="Parallel Session" />
+                        <MenuItem fx:id="sm8" mnemonicParsing="false" onAction="#handleMenuStudent" text="Non Overlapping" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="sl" maxWidth="20.0" minWidth="58.0" mnemonicParsing="false" onAction="#handleMenuLecture" prefHeight="26.0" prefWidth="102.0" text="Lecture">
+                     <items>
+                        <MenuItem fx:id="sl1" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Subject" />
+                        <MenuItem fx:id="sl2" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Subject" />
+                        <MenuItem fx:id="sl3" mnemonicParsing="false" onAction="#handleMenuLecture" text="Edit Subject" />
+                        <MenuItem fx:id="sl4" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Lecture" />
+                        <MenuItem fx:id="sl5" mnemonicParsing="false" onAction="#handleMenuLecture" text="Update Lecture" />
+                        <MenuItem fx:id="sl6" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Lecture" />
+                        <MenuItem fx:id="sl7" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Session" />
+                        <MenuItem fx:id="sl8" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Session" />
+                        <MenuItem fx:id="sl9" mnemonicParsing="false" onAction="#handleMenuLecture" text="Edit Session" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="slo" maxWidth="80.0" mnemonicParsing="false" onAction="#handleMenuLocation" prefHeight="26.0" prefWidth="100.0" text="Location">
+                     <items>
+                        <MenuItem fx:id="slo1" mnemonicParsing="false" onAction="#handleMenuLocation" text="Student Statistic" />
+                        <MenuItem fx:id="slo2" mnemonicParsing="false" onAction="#handleMenuLocation" text="Static for Lecture and Subject" />
+                        <MenuItem fx:id="slo3" mnemonicParsing="false" onAction="#handleMenuLocation" text="Rooms for Subject/Tag/Lecture/Session" />
+                        <MenuItem fx:id="slo4" mnemonicParsing="false" onAction="#handleMenuLocation" text="Rooms for Groups" />
+                        <MenuItem fx:id="slo5" mnemonicParsing="false" onAction="#handleMenuLocation" text="Concecutive Sessions" />
+                        <MenuItem fx:id="slo6" mnemonicParsing="false" onAction="#handleMenuLocation" text="Time Cannot be Reserved" />
+                        <MenuItem fx:id="slo7" mnemonicParsing="false" onAction="#handleMenuLocation" text="Building and Rooms" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="sdm" maxWidth="100.0" mnemonicParsing="false" onAction="#handleMenuDay" prefHeight="26.0" prefWidth="500.0" text="Date/Time">
+                     <items>
+                        <MenuItem fx:id="sdm1" mnemonicParsing="false" onAction="#handleMenuDay" text="Working Days and Hours" />
+                        <MenuItem fx:id="sdm2" mnemonicParsing="false" onAction="#handleMenuDay" text="Session&amp;not available time alocation" />
+                        <MenuItem fx:id="sdm3" mnemonicParsing="false" onAction="#handleMenuDay" text="Session Room" />
+                     </items>
+                  </MenuButton>
+              </buttons>
+            </ButtonBar>
+         </top>
+      </BorderPane>
+   </center>
+   <bottom>
+      <Pane prefHeight="88.0" prefWidth="796.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="clear" layoutX="320.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: red;" text="Reset">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="save" layoutX="228.0" layoutY="33.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: green;" text="Insert">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnDelete" layoutX="1113.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: red;" text="Delete">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnUpdate" layoutX="1023.0" layoutY="32.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: green;" text="Update">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="search" layoutX="846.0" layoutY="36.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Search" />
+            <TextField fx:id="searchbar" layoutX="625.0" layoutY="36.0" prefHeight="25.0" prefWidth="210.0" promptText="Search by ID" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>

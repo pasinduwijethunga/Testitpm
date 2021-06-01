@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetablemanagementsystem.studentpackage.controllers.OverlappingController">
+   <children>
+      <AnchorPane prefHeight="832.0" prefWidth="1010.0">
+         <children>
+            <Pane layoutY="-1.0" prefHeight="824.0" prefWidth="1000.0" style="-fx-background-color: #ABB2B9;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <children>
+                  <TextField fx:id="searchbar" layoutX="723.0" layoutY="193.0" prefHeight="30.0" prefWidth="245.0" promptText="Search By ID" />
+                  <Button fx:id="insert1" layoutX="223.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="100.0" text="Insert">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="update7" layoutX="384.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="100.0" text="Update">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="delete7" layoutX="542.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="100.0" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancel7" layoutX="691.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="100.0" text="Cancel">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="search" layoutX="658.0" layoutY="193.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Search" />
+                  <Label fx:id="bar4" layoutX="14.0" layoutY="209.0" prefHeight="21.0" prefWidth="380.0" style="-fx-background-color: #EBEDEF;" text="/Home/Generate Time Table / Allocations/Non Overlapping">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label4" layoutX="10.0" layoutY="234.0" prefHeight="45.0" prefWidth="987.0" style="-fx-background-color: #EBEDEF;" text="Non Overlapping Session">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <VBox layoutX="73.0" layoutY="287.0" prefHeight="217.0" prefWidth="135.0" spacing="4.0">
+                     <children>
+                        <Label fx:id="lb1" prefHeight="39.0" prefWidth="198.0" text="Subject Name ">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb5" prefHeight="39.0" prefWidth="167.0" text="Lecture Name">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb51112" layoutX="10.0" layoutY="225.0" prefHeight="39.0" prefWidth="167.0" text="Year Sem">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb5111" layoutX="10.0" layoutY="225.0" prefHeight="39.0" prefWidth="167.0" text="Group ID">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb51111" layoutX="10.0" layoutY="225.0" prefHeight="39.0" prefWidth="167.0" text="Sub Group ID">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="211.0" layoutY="302.0" prefHeight="203.0" prefWidth="266.0" spacing="6.0">
+                     <children>
+                        <ComboBox fx:id="combo1" onAction="#getSubName" prefHeight="31.0" prefWidth="286.0" />
+                        <ComboBox fx:id="combo2" layoutX="10.0" layoutY="47.0" prefHeight="31.0" prefWidth="286.0" />
+                        <ComboBox fx:id="combo3" layoutX="10.0" layoutY="84.0" onAction="#getYearsem" prefHeight="31.0" prefWidth="286.0" />
+                        <ComboBox fx:id="combo4" layoutX="10.0" layoutY="195.0" prefHeight="31.0" prefWidth="286.0" />
+                        <ComboBox fx:id="combo5" layoutX="10.0" layoutY="232.0" prefHeight="31.0" prefWidth="286.0" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="519.0" layoutY="301.0" prefHeight="175.0" prefWidth="125.0" spacing="4.0">
+                     <children>
+                        <Label fx:id="lb11" prefHeight="39.0" prefWidth="198.0" text="Starting Time">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb21" prefHeight="39.0" prefWidth="167.0" text="End Time">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb51" prefHeight="39.0" prefWidth="167.0" text="Day">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lb511" layoutX="10.0" layoutY="139.0" prefHeight="39.0" prefWidth="167.0" text="Duration">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="655.0" layoutY="312.0" prefHeight="162.0" prefWidth="272.0" spacing="6.0">
+                     <children>
+                        <TextField fx:id="startingtime1" layoutX="10.0" layoutY="47.0" />
+                        <TextField fx:id="endtime1" layoutX="10.0" layoutY="121.0" />
+                        <TextField fx:id="day" layoutX="10.0" layoutY="121.0" />
+                        <TextField fx:id="duration" layoutX="10.0" layoutY="84.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <TableView fx:id="table4" layoutX="53.0" layoutY="584.0" prefHeight="162.0" prefWidth="920.0">
+               <columns>
+                  <TableColumn fx:id="colid1" minWidth="20.0" prefWidth="90.0" text="ID" />
+                  <TableColumn fx:id="col2" minWidth="20.0" prefWidth="132.0" text="Subject Name" />
+                  <TableColumn fx:id="col3" minWidth="20.0" prefWidth="133.0" text="Lecture Name" />
+                  <TableColumn fx:id="col4" minWidth="20.0" prefWidth="158.0" text="YearSem" />
+                  <TableColumn fx:id="col5" minWidth="20.0" prefWidth="224.0" text="GroupID" />
+                  <TableColumn fx:id="col6" minWidth="20.0" prefWidth="182.0" text="Sub GroupID" />
+                  <TableColumn fx:id="col7" minWidth="20.0" prefWidth="182.0" text="Starting Time" />
+                  <TableColumn fx:id="col8" minWidth="20.0" prefWidth="182.0" text="End Time" />
+                  <TableColumn fx:id="col9" minWidth="20.0" prefWidth="182.0" text="Day" />
+                  <TableColumn fx:id="col10" minWidth="20.0" prefWidth="182.0" text="Duration" />
+               </columns>
+            </TableView>
+            <ButtonBar layoutX="10.0" layoutY="147.0" prefHeight="46.0" prefWidth="470.0">
+               <buttons>
+                  <Button fx:id="Home" maxWidth="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMenuStudent" prefHeight="26.0" prefWidth="0.0" text="HOME" />
+                  <MenuButton fx:id="sm" maxWidth="20.0" minWidth="52.0" mnemonicParsing="false" onAction="#handleMenuStudent" prefHeight="26.0" prefWidth="102.0" text="Student">
+                     <items>
+                        <MenuItem fx:id="sm1" mnemonicParsing="false" onAction="#handleMenuStudent" text="Academic Details" />
+                        <MenuItem fx:id="sm2" mnemonicParsing="false" onAction="#handleMenuStudent" text="Program Details" />
+                        <MenuItem fx:id="sm3" mnemonicParsing="false" onAction="#handleMenuStudent" text="Group Details" />
+                        <MenuItem fx:id="sm4" mnemonicParsing="false" onAction="#handleMenuStudent" text="Tags Details" />
+                        <MenuItem fx:id="sm5" mnemonicParsing="false" onAction="#handleMenuStudent" text="Generate Group ID" />
+                        <MenuItem fx:id="sm6" mnemonicParsing="false" onAction="#handleMenuStudent" text="Concecutive Session" />
+                        <MenuItem fx:id="sm7" mnemonicParsing="false" onAction="#handleMenuStudent" text="Parallel Session" />
+                        <MenuItem fx:id="sm8" mnemonicParsing="false" onAction="#handleMenuStudent" text="Non Overlapping" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="sl" layoutX="126.0" layoutY="17.0" maxWidth="20.0" minWidth="58.0" mnemonicParsing="false" onAction="#handleMenuLecture" prefHeight="26.0" prefWidth="102.0" text="Lecture">
+                     <items>
+                        <MenuItem fx:id="sl1" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Subject" />
+                        <MenuItem fx:id="sl2" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Subject" />
+                        <MenuItem fx:id="sl3" mnemonicParsing="false" onAction="#handleMenuLecture" text="Edit Subject" />
+                        <MenuItem fx:id="sl4" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Lecture" />
+                        <MenuItem fx:id="sl5" mnemonicParsing="false" onAction="#handleMenuLecture" text="Update Lecture" />
+                        <MenuItem fx:id="sl6" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Lecture" />
+                        <MenuItem fx:id="sl7" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Session" />
+                        <MenuItem fx:id="sl8" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Session" />
+                        <MenuItem fx:id="sl9" mnemonicParsing="false" onAction="#handleMenuLecture" text="Edit Session" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="slo" layoutX="288.0" layoutY="17.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleMenuLocation" prefHeight="26.0" prefWidth="100.0" text="Location">
+                     <items>
+                        <MenuItem fx:id="slo1" mnemonicParsing="false" onAction="#handleMenuLocation" text="Student Statistic" />
+                        <MenuItem fx:id="slo2" mnemonicParsing="false" onAction="#handleMenuLocation" text="Static for Lecture and Subject" />
+                        <MenuItem fx:id="slo3" mnemonicParsing="false" onAction="#handleMenuLocation" text="Rooms for Subject/Tag/Lecture/Session" />
+                        <MenuItem fx:id="slo4" mnemonicParsing="false" onAction="#handleMenuLocation" text="Rooms for Groups" />
+                        <MenuItem fx:id="slo5" mnemonicParsing="false" onAction="#handleMenuLocation" text="Concecutive Sessions" />
+                        <MenuItem fx:id="slo6" mnemonicParsing="false" onAction="#handleMenuLocation" text="Time Cannot be Reserved" />
+                        <MenuItem fx:id="slo7" mnemonicParsing="false" onAction="#handleMenuLocation" text="Building and Rooms" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="sdm" layoutX="202.0" layoutY="17.0" maxWidth="100.0" mnemonicParsing="false" onAction="#handleMenuDay" prefHeight="26.0" prefWidth="500.0" text="Date/Time">
+                     <items>
+                        <MenuItem fx:id="sdm1" mnemonicParsing="false" onAction="#handleMenuDay" text="Working Days and Hours" />
+                        <MenuItem fx:id="sdm2" mnemonicParsing="false" onAction="#handleMenuDay" text="Session&amp;not available time alocation" />
+                        <MenuItem fx:id="sdm3" mnemonicParsing="false" onAction="#handleMenuDay" text="Session Room" />
+                     </items>
+                  </MenuButton>
+               </buttons>
+            </ButtonBar>
+            <Label layoutX="25.0" layoutY="52.0" prefHeight="53.0" prefWidth="970.0" style="-fx-background-color: #EBEDEF;" text="ABC Institute">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="897.0" prefWidth="1312.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetablemanagementsystem.statistics.views.RoomsWithGroups">
+   <children>
+      <Label layoutX="485.0" layoutY="6.0" text="INSTITUTE OF ABC" textAlignment="CENTER">
+         <font>
+            <Font size="49.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tvTable" layoutX="71.0" layoutY="336.0" prefHeight="344.0" prefWidth="836.0">
+        <columns>
+          <TableColumn fx:id="colGroup" prefWidth="153.0" text="Group " />
+          <TableColumn fx:id="colSub" prefWidth="133.0" text="Sub Groups" />
+            <TableColumn fx:id="S2tr1" minWidth="0.0" prefWidth="196.0" text="Room" />
+            <TableColumn fx:id="colStart" minWidth="0.0" prefWidth="198.0" text="Start Time" />
+            <TableColumn fx:id="colEnd" minWidth="0.0" prefWidth="154.0" text="End Time" />
+        </columns>
+      </TableView>
+      <ComboBox fx:id="comboGroup" layoutX="963.0" layoutY="320.0" prefHeight="33.0" prefWidth="185.0" promptText="Groups" />
+      <ComboBox fx:id="comboSub" layoutX="963.0" layoutY="492.0" prefHeight="33.0" prefWidth="185.0" promptText="Sub groups" />
+      <ComboBox fx:id="comboRoom" layoutX="963.0" layoutY="680.0" prefHeight="33.0" prefWidth="185.0" promptText="Room" />
+      <Button fx:id="btnDelete" layoutX="791.0" layoutY="713.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="116.0" text="Delete" />
+      <ComboBox fx:id="comboStart" layoutX="963.0" layoutY="399.0" prefHeight="33.0" prefWidth="185.0" promptText="Start Time" />
+      <ComboBox fx:id="comboEnd" layoutX="963.0" layoutY="587.0" prefHeight="33.0" prefWidth="185.0" promptText="End Time" />
+      <Button fx:id="btnUpdate" layoutX="791.0" layoutY="770.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="116.0" text="Update" />
+      <Label layoutX="3.0" layoutY="146.0" prefHeight="39.0" prefWidth="1305.0" style="-fx-background-color: #C0C0C0;" text="Rooms with groups">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="1204.0" layoutY="328.0" prefHeight="17.0" prefWidth="57.0" text="Groups" />
+      <Label layoutX="1204.0" layoutY="407.0" prefHeight="17.0" prefWidth="57.0" text="Start Time" />
+      <Label layoutX="1204.0" layoutY="500.0" prefHeight="17.0" prefWidth="57.0" text="Sub Group" />
+      <Label layoutX="1204.0" layoutY="595.0" prefHeight="17.0" prefWidth="57.0" text="End Time" />
+      <Label layoutX="1204.0" layoutY="688.0" prefHeight="17.0" prefWidth="57.0" text="Room" />
+      <ButtonBar layoutX="14.0" layoutY="93.0" prefHeight="46.0" prefWidth="470.0">
+         <buttons>
+            <Button fx:id="Home" maxWidth="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMenuStudent" prefHeight="26.0" prefWidth="0.0" text="HOME" />
+            <MenuButton fx:id="sm" maxWidth="20.0" minWidth="52.0" mnemonicParsing="false" onAction="#handleMenuStudent" prefHeight="26.0" prefWidth="102.0" text="Student">
+               <items>
+                  <MenuItem fx:id="sm1" mnemonicParsing="false" onAction="#handleMenuStudent" text="Academic Details" />
+                  <MenuItem fx:id="sm2" mnemonicParsing="false" onAction="#handleMenuStudent" text="Program Details" />
+                  <MenuItem fx:id="sm3" mnemonicParsing="false" onAction="#handleMenuStudent" text="Group Details" />
+                  <MenuItem fx:id="sm4" mnemonicParsing="false" onAction="#handleMenuStudent" text="Tags Details" />
+                  <MenuItem fx:id="sm5" mnemonicParsing="false" onAction="#handleMenuStudent" text="Generate Group ID" />
+                  <MenuItem fx:id="sm6" mnemonicParsing="false" onAction="#handleMenuStudent" text="Concecutive Session" />
+                  <MenuItem fx:id="sm7" mnemonicParsing="false" onAction="#handleMenuStudent" text="Parallel Session" />
+                  <MenuItem fx:id="sm8" mnemonicParsing="false" onAction="#handleMenuStudent" text="Non Overlapping" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="sl" layoutX="126.0" layoutY="17.0" maxWidth="20.0" minWidth="58.0" mnemonicParsing="false" onAction="#handleMenuLecture" prefHeight="26.0" prefWidth="102.0" text="Lecture">
+               <items>
+                  <MenuItem fx:id="sl1" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Subject" />
+                  <MenuItem fx:id="sl2" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Subject" />
+                  <MenuItem fx:id="sl3" mnemonicParsing="false" onAction="#handleMenuLecture" text="Edit Subject" />
+                  <MenuItem fx:id="sl4" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Lecture" />
+                  <MenuItem fx:id="sl5" mnemonicParsing="false" onAction="#handleMenuLecture" text="Update Lecture" />
+                  <MenuItem fx:id="sl6" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Lecture" />
+                  <MenuItem fx:id="sl7" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Session" />
+                  <MenuItem fx:id="sl8" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Session" />
+                  <MenuItem fx:id="sl9" mnemonicParsing="false" onAction="#handleMenuLecture" text="Edit Session" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="slo" layoutX="288.0" layoutY="17.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleMenuLocation" prefHeight="26.0" prefWidth="100.0" text="Location">
+               <items>
+                  <MenuItem fx:id="slo1" mnemonicParsing="false" onAction="#handleMenuLocation" text="Student Statistic" />
+                  <MenuItem fx:id="slo2" mnemonicParsing="false" onAction="#handleMenuLocation" text="Static for Lecture and Subject" />
+                  <MenuItem fx:id="slo3" mnemonicParsing="false" onAction="#handleMenuLocation" text="Rooms for Subject/Tag/Lecture/Session" />
+                  <MenuItem fx:id="slo4" mnemonicParsing="false" onAction="#handleMenuLocation" text="Rooms for Groups" />
+                  <MenuItem fx:id="slo5" mnemonicParsing="false" onAction="#handleMenuLocation" text="Concecutive Sessions" />
+                  <MenuItem fx:id="slo6" mnemonicParsing="false" onAction="#handleMenuLocation" text="Time Cannot be Reserved" />
+                  <MenuItem fx:id="slo7" mnemonicParsing="false" onAction="#handleMenuLocation" text="Building and Rooms" />
+               </items>
+            </MenuButton>
+            <MenuButton fx:id="sdm" layoutX="202.0" layoutY="17.0" maxWidth="100.0" mnemonicParsing="false" onAction="#handleMenuDay" prefHeight="26.0" prefWidth="500.0" text="Date/Time">
+               <items>
+                  <MenuItem fx:id="sdm1" mnemonicParsing="false" onAction="#handleMenuDay" text="Working Days and Hours" />
+                  <MenuItem fx:id="sdm2" mnemonicParsing="false" onAction="#handleMenuDay" text="Session&amp;not available time alocation" />
+                  <MenuItem fx:id="sdm3" mnemonicParsing="false" onAction="#handleMenuDay" text="Session Room" />
+               </items>
+            </MenuButton>
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

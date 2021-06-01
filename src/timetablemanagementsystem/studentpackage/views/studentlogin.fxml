@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="748.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetablemanagementsystem.studentpackage.views.StudentloginController">
+   <children>
+      <AnchorPane layoutX="-4.0" layoutY="-3.0" prefHeight="754.0" prefWidth="1009.0" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="-3.0">
+         <children>
+            <Pane layoutX="245.0" layoutY="200.0" prefHeight="387.0" prefWidth="238.0" style="-fx-background-color: #778899;" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="245.0" AnchorPane.rightAnchor="526.0" AnchorPane.topAnchor="200.0">
+               <children>
+                  <HBox layoutX="19.0" layoutY="116.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="101.0" fitWidth="201.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <StackPane layoutX="481.0" layoutY="200.0" prefHeight="387.0" prefWidth="334.0" AnchorPane.bottomAnchor="167.0" AnchorPane.leftAnchor="481.0" AnchorPane.rightAnchor="194.0" AnchorPane.topAnchor="200.0">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #DCDCDC;">
+                     <children>
+                        <TextField layoutX="54.0" layoutY="96.0" prefHeight="35.0" prefWidth="245.0" promptText="Email" />
+                        <PasswordField layoutX="54.0" layoutY="161.0" prefHeight="35.0" prefWidth="245.0" promptText="Password" />
+                        <Button layoutX="179.0" layoutY="225.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="120.0" style="-fx-background-color: #228B22;" styleClass="button1" text="Sign in" textFill="#eae3e3" />
+                        <Button layoutX="55.0" layoutY="298.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="245.0" style="-fx-background-color: #228B22;" styleClass="button1" text="Don't have an account?  Sign up" textFill="#eae3e3" />
+                        <Label layoutX="49.0" layoutY="234.0" text="Forgot Password ?" />
+                        <Label layoutX="50.0" layoutY="35.0" prefHeight="35.0" prefWidth="120.0" text="Sign In">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="label" layoutX="179.0" layoutY="25.0" />
+                        <Button fx:id="loginbutton" layoutX="7.0" layoutY="10.0" mnemonicParsing="false" onAction="#open" text="Button" />
+                     </children>
+                  </Pane>
+               </children>
+            </StackPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="817.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="timetablemanagementsystem.studentpackage.controllers.Group_detailsController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="-1.0" prefHeight="817.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutY="-3.0" prefHeight="824.0" prefWidth="1000.0" style="-fx-background-color: #ABB2B9;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <StackPane layoutX="206.0" layoutY="303.0" prefHeight="254.0" prefWidth="225.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="4.0">
+                           <children>
+                              <Label fx:id="la1" prefHeight="39.0" prefWidth="198.0" text="Academic Year &amp; Semester">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lp1" prefHeight="39.0" prefWidth="167.0" text="Programme">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lg1" prefHeight="39.0" prefWidth="167.0" text="Group Number">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="ls1" prefHeight="39.0" prefWidth="167.0" text="Sub Group Number">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lid1" prefHeight="39.0" prefWidth="167.0" text="Group ID">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lsid1" prefHeight="39.0" prefWidth="167.0" text="Sub Group ID">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+                  <StackPane layoutX="431.0" layoutY="285.0" prefHeight="281.0" prefWidth="292.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="4.0" />
+                        <Pane prefHeight="289.0" prefWidth="292.0">
+                           <children>
+                              <TextField fx:id="tf1" layoutX="18.0" layoutY="20.0" prefHeight="30.0" prefWidth="245.0" />
+                              <TextField fx:id="tf2" layoutX="20.0" layoutY="61.0" prefHeight="30.0" prefWidth="245.0" />
+                              <TextField fx:id="tf3" layoutX="21.0" layoutY="104.0" prefHeight="30.0" prefWidth="245.0" />
+                              <TextField fx:id="tf4" layoutX="21.0" layoutY="148.0" prefHeight="30.0" prefWidth="245.0" />
+                              <TextField fx:id="tf5" layoutX="22.0" layoutY="191.0" prefHeight="30.0" prefWidth="245.0" />
+                              <TextField fx:id="tf6" layoutX="23.0" layoutY="233.0" prefHeight="30.0" prefWidth="245.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <TableView fx:id="table3" layoutX="43.0" layoutY="588.0" prefHeight="162.0" prefWidth="920.0">
+                     <columns>
+                        <TableColumn fx:id="tcol0" minWidth="20.0" prefWidth="55.0" text="ID" />
+                        <TableColumn fx:id="tcol1" minWidth="20.0" prefWidth="127.0" text="Academic Y&amp;S" />
+                        <TableColumn fx:id="tcol20" minWidth="20.0" prefWidth="111.0" text="Program" />
+                        <TableColumn fx:id="tcol3" minWidth="20.0" prefWidth="130.0" text="Group Number" />
+                        <TableColumn fx:id="tcol4" minWidth="20.0" prefWidth="157.0" text="Sub Group Number" />
+                        <TableColumn fx:id="tcol5" minWidth="20.0" prefWidth="140.0" text="Group ID" />
+                        <TableColumn fx:id="tcol6" minWidth="20.0" prefWidth="197.0" text="Sub Group ID" />
+                     </columns>
+                  </TableView>
+                  <Button fx:id="insert3" layoutX="784.0" layoutY="303.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="100.0" text="Insert">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="update3" layoutX="784.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="100.0" text="Update">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="delete3" layoutX="784.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="100.0" text="Delete">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancel3" layoutX="785.0" layoutY="482.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="30.0" prefWidth="100.0" text="Cancel">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="search" layoutX="658.0" layoutY="175.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Search" />
+                  <TextField fx:id="searchbar" layoutX="723.0" layoutY="175.0" prefHeight="31.0" prefWidth="225.0" promptText="Search By ID" />
+               </children>
+            </Pane>
+            <Label fx:id="bar3" layoutX="21.0" layoutY="197.0" prefHeight="21.0" prefWidth="234.0" style="-fx-background-color: #EBEDEF;" text="/Home/Students/Group Details">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="label3" layoutX="17.0" layoutY="224.0" prefHeight="45.0" prefWidth="970.0" style="-fx-background-color: #EBEDEF;" text=" Group Details">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ButtonBar layoutX="10.0" layoutY="147.0" prefHeight="46.0" prefWidth="470.0">
+               <buttons>
+                  <Button fx:id="Home" maxWidth="10.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleMenuStudent" prefHeight="26.0" prefWidth="0.0" text="HOME" />
+                  <MenuButton fx:id="sm" maxWidth="20.0" minWidth="52.0" mnemonicParsing="false" onAction="#handleMenuStudent" prefHeight="26.0" prefWidth="102.0" text="Student">
+                     <items>
+                        <MenuItem fx:id="sm1" mnemonicParsing="false" onAction="#handleMenuStudent" text="Academic Details" />
+                        <MenuItem fx:id="sm2" mnemonicParsing="false" onAction="#handleMenuStudent" text="Program Details" />
+                        <MenuItem fx:id="sm3" mnemonicParsing="false" onAction="#handleMenuStudent" text="Group Details" />
+                        <MenuItem fx:id="sm4" mnemonicParsing="false" onAction="#handleMenuStudent" text="Tags Details" />
+                        <MenuItem fx:id="sm5" mnemonicParsing="false" onAction="#handleMenuStudent" text="Generate Group ID" />
+                        <MenuItem fx:id="sm6" mnemonicParsing="false" onAction="#handleMenuStudent" text="Concecutive Session" />
+                        <MenuItem fx:id="sm7" mnemonicParsing="false" onAction="#handleMenuStudent" text="Parallel Session" />
+                        <MenuItem fx:id="sm8" mnemonicParsing="false" onAction="#handleMenuStudent" text="Non Overlapping" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="sl" layoutX="126.0" layoutY="17.0" maxWidth="20.0" minWidth="58.0" mnemonicParsing="false" onAction="#handleMenuLecture" prefHeight="26.0" prefWidth="102.0" text="Lecture">
+                     <items>
+                        <MenuItem fx:id="sl1" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Subject" />
+                        <MenuItem fx:id="sl2" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Subject" />
+                        <MenuItem fx:id="sl3" mnemonicParsing="false" onAction="#handleMenuLecture" text="Edit Subject" />
+                        <MenuItem fx:id="sl4" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Lecture" />
+                        <MenuItem fx:id="sl5" mnemonicParsing="false" onAction="#handleMenuLecture" text="Update Lecture" />
+                        <MenuItem fx:id="sl6" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Lecture" />
+                        <MenuItem fx:id="sl7" mnemonicParsing="false" onAction="#handleMenuLecture" text="Insert Session" />
+                        <MenuItem fx:id="sl8" mnemonicParsing="false" onAction="#handleMenuLecture" text="View Session" />
+                        <MenuItem fx:id="sl9" mnemonicParsing="false" onAction="#handleMenuLecture" text="Edit Session" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="slo" layoutX="288.0" layoutY="17.0" maxWidth="80.0" mnemonicParsing="false" onAction="#handleMenuLocation" prefHeight="26.0" prefWidth="100.0" text="Location">
+                     <items>
+                        <MenuItem fx:id="slo1" mnemonicParsing="false" onAction="#handleMenuLocation" text="Student Statistic" />
+                        <MenuItem fx:id="slo2" mnemonicParsing="false" onAction="#handleMenuLocation" text="Static for Lecture and Subject" />
+                        <MenuItem fx:id="slo3" mnemonicParsing="false" onAction="#handleMenuLocation" text="Rooms for Subject/Tag/Lecture/Session" />
+                        <MenuItem fx:id="slo4" mnemonicParsing="false" onAction="#handleMenuLocation" text="Rooms for Groups" />
+                        <MenuItem fx:id="slo5" mnemonicParsing="false" onAction="#handleMenuLocation" text="Concecutive Sessions" />
+                        <MenuItem fx:id="slo6" mnemonicParsing="false" onAction="#handleMenuLocation" text="Time Cannot be Reserved" />
+                        <MenuItem fx:id="slo7" mnemonicParsing="false" onAction="#handleMenuLocation" text="Building and Rooms" />
+                     </items>
+                  </MenuButton>
+                  <MenuButton fx:id="sdm" layoutX="202.0" layoutY="17.0" maxWidth="100.0" mnemonicParsing="false" onAction="#handleMenuDay" prefHeight="26.0" prefWidth="500.0" text="Date/Time">
+                     <items>
+                        <MenuItem fx:id="sdm1" mnemonicParsing="false" onAction="#handleMenuDay" text="Working Days and Hours" />
+                        <MenuItem fx:id="sdm2" mnemonicParsing="false" onAction="#handleMenuDay" text="Session&amp;not available time alocation" />
+                        <MenuItem fx:id="sdm3" mnemonicParsing="false" onAction="#handleMenuDay" text="Session Room" />
+                     </items>
+                  </MenuButton>
+               </buttons>
+            </ButtonBar>
+            <Label layoutX="25.0" layoutY="52.0" prefHeight="53.0" prefWidth="970.0" style="-fx-background-color: #EBEDEF;" text="ABC Institute">
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
